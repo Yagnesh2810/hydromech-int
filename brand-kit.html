@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ETHICS Metal Forming Machineries — Brand Kit</title>
+<style>
+  :root{
+    --navy-deep:#1c2f4a;
+    --navy-mid:#2e446b;
+    --navy-light:#4a5f8e;
+    --steel-100:#dedfdf;
+    --steel-200:#c0c1c1;
+    --steel-300:#9e9f9f;
+    --gray-text:#717170;
+    --gray-text2:#888889;
+    --paper:#f6f7f8;
+    --ink:#1c2f4a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    font-family:'Segoe UI',Arial,sans-serif;
+    color:var(--ink);
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 48px 100px;}
+
+  /* Cover */
+  .cover{
+    background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy-mid) 55%,var(--navy-light) 100%);
+    padding:90px 48px 70px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .cover::after{
+    content:"";
+    position:absolute;left:0;right:0;bottom:0;height:6px;
+    background:linear-gradient(90deg,var(--steel-300),var(--steel-100),var(--steel-300));
+  }
+  .cover img{max-width:680px;width:90%;filter:drop-shadow(0 10px 30px rgba(0,0,0,.35));}
+  .cover .kicker{
+    color:var(--steel-100);
+    letter-spacing:.35em;
+    font-size:13px;
+    font-weight:600;
+    margin-top:28px;
+    text-transform:uppercase;
+  }
+  .cover h1{
+    color:#fff;
+    font-size:34px;
+    letter-spacing:.05em;
+    margin:14px 0 0;
+    font-weight:300;
+  }
+  .cover h1 b{font-weight:700;}
+
+  /* Section headers */
+  h2.section-title{
+    font-size:13px;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--navy-light);
+    border-bottom:2px solid var(--navy-deep);
+    padding-bottom:14px;
+    margin:80px 0 36px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  h2.section-title .num{
+    background:var(--navy-deep);
+    color:#fff;
+    width:30px;height:30px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;
+    letter-spacing:0;
+  }
+  h3{font-size:18px;color:var(--navy-deep);margin:36px 0 12px;letter-spacing:.02em;}
+  p{line-height:1.7;color:#444;font-size:15px;}
+
+  /* Logo usage grid */
+  .logo-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-top:24px;
+  }
+  .logo-card{
+    border:1px solid var(--steel-100);
+    border-radius:8px;
+    padding:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:160px;
+  }
+  .logo-card.light{background:#fff;}
+  .logo-card.dark{background:var(--navy-deep);}
+  .logo-card img{max-width:100%;max-height:120px;}
+  .caption{
+    text-align:center;font-size:12px;color:var(--gray-text);
+    margin-top:10px;letter-spacing:.05em;text-transform:uppercase;
+  }
+
+  .clearspace{
+    border:1px dashed var(--steel-300);
+    padding:50px;
+    text-align:center;
+    border-radius:8px;
+    background:#fff;
+  }
+  .clearspace img{max-width:380px;width:100%;}
+
+  /* Don'ts */
+  .donts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px;}
+  .dont-card{
+    border:1px solid #f0d0d0;
+    background:#fff7f7;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+  }
+  .dont-card .x{color:#c0392b;font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:10px;}
+  .dont-card img{max-width:100%;max-height:70px;}
+  .dont-card.skew img{transform:skewX(-12deg);}
+  .dont-card.stretch img{transform:scaleX(1.6);}
+  .dont-card.recolor img{filter:hue-rotate(150deg) saturate(3);}
+
+  /* Color palette */
+  .palette{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:10px;}
+  .swatch{border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.06);box-shadow:0 2px 8px rgba(0,0,0,.04);}
+  .swatch .block{height:100px;}
+  .swatch .info{background:#fff;padding:14px 16px;}
+  .swatch .name{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.04em;}
+  .swatch .role{font-size:11px;color:var(--gray-text);margin:4px 0 10px;}
+  .swatch .code{font-size:11px;font-family:'Courier New',monospace;color:#555;line-height:1.6;}
+
+  /* Typography */
+  .type-row{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1px solid var(--steel-100);
+    padding:18px 0;
+  }
+  .type-row .label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-text);width:160px;flex-shrink:0;}
+  .type-sample{flex:1;}
+  .display-font{font-family:Arial,sans-serif;font-weight:800;font-style:italic;letter-spacing:.01em;color:var(--navy-deep);}
+  .support-font{font-family:'Segoe UI',Arial,sans-serif;font-weight:600;letter-spacing:.06em;color:var(--gray-text);text-transform:uppercase;}
+  .body-font{font-family:'Segoe UI',Arial,sans-serif;font-weight:400;color:#333;}
+
+  /* Tagline / partner block */
+  .partner-bar{
+    background:#fff;border:1px solid var(--steel-100);border-radius:8px;
+    padding:24px 30px;margin-top:18px;display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:16px;
+  }
+  .pill{
+    background:var(--navy-deep);color:#fff;font-size:11px;padding:6px 14px;border-radius:20px;
+    letter-spacing:.1em;text-transform:uppercase;
+  }
+
+  /* Footer */
+  .footer{
+    margin-top:90px;padding:30px 0;border-top:1px solid var(--steel-100);
+    text-align:center;color:var(--gray-text);font-size:12px;letter-spacing:.05em;
+  }
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+
+  table.specs{width:100%;border-collapse:collapse;margin-top:10px;}
+  table.specs td{padding:10px 0;border-bottom:1px solid var(--steel-100);font-size:14px;color:#444;}
+  table.specs td:first-child{color:var(--gray-text);width:220px;text-transform:uppercase;font-size:11px;letter-spacing:.08em;}
+</style>
+</head>
+<body>
+
+  <div class="cover">
+    <img src="logo_on_navy.png" alt="ETHICS Metal Forming Machineries India logo">
+    <div class="kicker">Brand Identity Guidelines</div>
+    <h1>ETHICS <b>METAL FORMING MACHINERIES</b> — INDIA</h1>
+  </div>
+
+  <div class="wrap">
+
+    <h2 class="section-title"><span class="num">1</span>Brand Overview</h2>
+    <p>
+      ETHICS Metal Forming Machineries India is positioned as an engineering-grade industrial brand —
+      precision, strength, and reliability expressed visually through a brushed-metal wordmark, a deep
+      structural navy, and disciplined steel-gray supporting type. This document defines how the mark and
+      its colors should be used consistently across stationery, signage, brochures, exhibition stands,
+      packaging, and digital platforms.
+    </p>
+    <div class="partner-bar">
+      <div><strong>Brand essence:</strong> Engineering precision · Industrial trust · Manufacturing strength</div>
+      <div class="pill">India · Metal Forming Machinery</div>
+    </div>
+
+    <h2 class="section-title"><span class="num">2</span>Logo</h2>
+    <p>The primary logo consists of three locked elements: the metallic "ETHICS" wordmark, the framed
+    "METAL FORMING MACHINERIES" descriptor bar, and the "INDIA" sub-mark. These three elements must
+    always appear together in the same proportions — never separated or rearranged.</p>
+
+    <div class="logo-grid">
+      <div>
+        <div class="logo-card light"><img src="logo.png" alt="Logo on light background"></div>
+        <div class="caption">Primary — on white / light backgrounds</div>
+      </div>
+      <div>
+        <div class="logo-card dark"><img src="logo.png" alt="Logo on dark background"></div>
+        <div class="caption">On dark navy / photographic backgrounds</div>
+      </div>
+    </div>
+
+    <h3>Clear Space &amp; Minimum Size</h3>
+    <p>Maintain clear space around the logo equal to the height of the "I" in ETHICS (marked as X below).
+    No text, imagery, or graphic element should enter this zone. Do not scale the logo below 30mm
+    wide in print or 160px wide on screen — the framed descriptor bar becomes illegible below this size.</p>
+    <div class="clearspace">
+      <img src="logo.png" alt="Logo clear space example">
+    </div>
+
+    <h3>Incorrect Usage</h3>
+    <p>The integrity of the metallic gradient and the locked lockup must never be compromised. Avoid the following:</p>
+    <div class="donts">
+      <div class="dont-card skew"><span class="x">✕ Don't skew</span><img src="logo.png"></div>
+      <div class="dont-card stretch"><span class="x">✕ Don't stretch</span><img src="logo.png"></div>
+      <div class="dont-card recolor"><span class="x">✕ Don't recolor</span><img src="logo.png"></div>
+    </div>
+    <p style="margin-top:14px;">Also avoid: placing the logo on busy/low-contrast photography without a solid
+    backing panel, separating "ETHICS" from the "METAL FORMING MACHINERIES INDIA" descriptor, adding drop
+    shadows or outlines, or reproducing it below minimum size.</p>
+
+    <h2 class="section-title"><span class="num">3</span>Color Palette</h2>
+    <p>Colors were extracted directly from the master logo file to guarantee a perfect on-brand match
+    across all applications. Navy is the dominant brand color; steel grays support it as neutrals.</p>
+
+    <h3>Primary — Engineering Navy</h3>
+    <div class="palette">
+      <div class="swatch">
+        <div class="block" style="background:#1c2f4a;"></div>
+        <div class="info">
+          <div class="name">Navy Deep</div>
+          <div class="role">Primary / wordmark shadow</div>
+          <div class="code">HEX #1C2F4A<br>RGB 28, 47, 74<br>CMYK 86, 70, 38, 26</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#2e446b;"></div>
+        <div class="info">
+          <div class="name">Navy Mid</div>
+          <div class="role">Core brand navy</div>
+          <div class="code">HEX #2E446B<br>RGB 46, 68, 107<br>CMYK 80, 62, 25, 7</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#4a5f8e;"></div>
+        <div class="info">
+          <div class="name">Navy Light</div>
+          <div class="role">Highlights / gradients</div>
+          <div class="code">HEX #4A5F8E<br>RGB 74, 95, 142<br>CMYK 71, 51, 13, 1</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#11385c;"></div>
+        <div class="info">
+          <div class="name">Navy Background</div>
+          <div class="role">Reversed / dark panels</div>
+          <div class="code">HEX #11385C<br>RGB 17, 56, 92<br>CMYK 88, 60, 28, 12</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Secondary — Brushed Steel</h3>
+    <div class="palette">
+      <div class="swatch">
+        <div class="block" style="background:#dedfdf;"></div>
+        <div class="info">
+          <div class="name">Steel Light</div>
+          <div class="role">Metallic highlight</div>
+          <div class="code">HEX #DEDFDF<br>RGB 222, 223, 223<br>CMYK 11, 8, 8, 0</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#c0c1c1;"></div>
+        <div class="info">
+          <div class="name">Steel Mid</div>
+          <div class="role">Frame / border tone</div>
+          <div class="code">HEX #C0C1C1<br>RGB 192, 193, 193<br>CMYK 22, 17, 17, 1</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#9e9f9f;"></div>
+        <div class="info">
+          <div class="name">Steel Dark</div>
+          <div class="role">Dividers / rules</div>
+          <div class="code">HEX #9E9F9F<br>RGB 158, 159, 159<br>CMYK 38, 31, 31, 4</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#717170;"></div>
+        <div class="info">
+          <div class="name">Gunmetal Text</div>
+          <div class="role">Descriptor text gray</div>
+          <div class="code">HEX #717170<br>RGB 113, 113, 112<br>CMYK 52, 44, 44, 18</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title"><span class="num">4</span>Typography</h2>
+    <p>The logo uses a custom, heavily-engineered italic display face that should not be reproduced for
+    body copy. For all collateral, pair it with clean, modern sans-serifs that echo its precision
+    without competing with it.</p>
+
+    <div class="type-row">
+      <div class="label">Display / Headlines</div>
+      <div class="type-sample"><span class="display-font" style="font-size:36px;">Montserrat ExtraBold Italic</span></div>
+    </div>
+    <div class="type-row">
+      <div class="label">Sub-heads / Labels</div>
+      <div class="type-sample"><span class="support-font" style="font-size:18px;">Segoe UI Semibold — Tracked Caps</span></div>
+    </div>
+    <div class="type-row">
+      <div class="label">Body Copy</div>
+      <div class="type-sample"><span class="body-font" style="font-size:16px;">Segoe UI / Calibri Regular — for brochures, specs sheets, and correspondence. Set in Navy Deep or 80% black for print legibility.</span></div>
+    </div>
+
+    <h2 class="section-title"><span class="num">5</span>Voice &amp; Positioning</h2>
+    <div class="two-col">
+      <div>
+        <h3>Tone</h3>
+        <p>Confident, technical, and precise. Communications should sound like an engineer talking to an
+        engineer — direct claims, real specifications, no exaggerated marketing language.</p>
+      </div>
+      <div>
+        <h3>Keywords</h3>
+        <p>Precision · Durability · Performance · Indian Manufacturing · Heavy Engineering · Reliability · Forming Technology</p>
+      </div>
+    </div>
+
+    <h2 class="section-title"><span class="num">6</span>Application Reference</h2>
+    <table class="specs">
+      <tr><td>Stationery</td><td>Logo top-left or centered on letterhead, Navy Deep rule beneath header, Steel Mid contact bar in footer.</td></tr>
+      <tr><td>Exhibition / Signage</td><td>Logo on Navy Background panel (reversed lockup), generous clear space, steel-frame border details echoing the logo's bar.</td></tr>
+      <tr><td>Digital / Website</td><td>Navy Deep as primary UI color, Steel grays for backgrounds/dividers, white space kept generous to let the metallic mark read clearly.</td></tr>
+      <tr><td>Vehicle / Machine Livery</td><td>Logo at minimum 300mm width, full color only — no single-color or reversed-only application on equipment.</td></tr>
+      <tr><td>Documents (quotes, datasheets)</td><td>Logo top-right, Gunmetal Text (#717170) for body copy, Navy Mid for section headers.</td></tr>
+    </table>
+
+    <div class="footer">
+      ETHICS METAL FORMING MACHINERIES INDIA — Brand Guidelines · Prepared 2026
+    </div>
+  </div>
+
+</body>
+</html>

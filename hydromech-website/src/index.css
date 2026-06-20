@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;1,800&display=swap');
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-350 {
+  animation-delay: 350ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Hero slideshow */
+.hero-slideshow {
+  background-size: cover;
+  background-position: center;
+  animation: kenBurns 15s infinite;
+}
+
+@keyframes kenBurns {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999999;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 6px;
+  top: 7px;
+}
+
+/* Counter animation */
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ETHICS Metal Forming Machineries India - Brand Colors */
+:root {
+  --navy-deep: #1c2f4a;
+  --navy-mid: #2e446b;
+  --navy-light: #4a5f8e;
+  --navy-bg: #11385c;
+  --steel-100: #dedfdf;
+  --steel-200: #c0c1c1;
+  --steel-300: #9e9f9f;
+  --gray-text: #717170;
+  --gray-text2: #888889;
+  --paper: #f6f7f8;
+  --ink: #1c2f4a;
+
+  --primary-red: #1c2f4a;
+  --primary-red-dark: #11385c;
+  --primary-red-light: #2e446b;
+  --accent-yellow: #dedfdf;
+  --accent-yellow-dark: #c0c1c1;
+  --industrial-dark: #1c2f4a;
+  --industrial-light: #4a5f8e;
+  --text-dark: #1c2f4a;
+  --text-light: #717170;
+  
+  --accent-orange: #4a5f8e;
+  --accent-orange-dark: #1c2f4a;
+  --steel-blue: #2e446b;
+  --steel-gray: #c0c1c1;
+  --machinery-gold: #c0c1c1;
+  --safety-orange: #dedfdf;
+  --construction-yellow: #9e9f9f;
+}
+
+/* Custom professional gradients */
+.bg-primary-gradient {
+  background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+}
+
+.text-primary-gradient {
+  background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Machinery-themed animations */
+@keyframes machineRotate {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.animate-machine {
+  animation: machineRotate 4s ease-in-out infinite;
+}
+
+/* Agricultural & Industrial styling */
+.machinery-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.machinery-card:hover {
+  border-left-color: var(--primary-red);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.15);
+}
+
+/* Product showcase styling */
+.product-showcase {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.product-showcase:hover::before {
+  left: 100%;
+}
+
+/* Premium Visual Utilities */
+.glass-panel {
+  background: rgba(28, 47, 74, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(28, 47, 74, 0.08);
+}
+
+.dark-glass-card {
+  background: rgba(11, 34, 60, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-border {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(74, 95, 142, 0.4), rgba(28, 47, 74, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::after {
+  background: linear-gradient(135deg, rgba(74, 95, 142, 0.9), rgba(28, 47, 74, 0.3));
+}
+
+.glow-shadow-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(28, 44, 74, 0.25), 0 0 15px -3px rgba(74, 95, 142, 0.2);
+}
+
+.progress-active {
+  animation: progressFill 5s linear forwards;
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Gradient text */
+.gradient-text-blue {
+  background: linear-gradient(135deg, #1c2f4a 0%, #4a5f8e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
